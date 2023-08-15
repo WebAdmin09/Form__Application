@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.heading {
+    display: flex;
+    color: rgb(219, 169, 94);
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Shadows Into Light', cursive;
+    margin-top: 150px;
+}
+.linkcontainer{
+    margin-top: 20px;
+}
+.back-link{
+    font-size: 20px;
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.input{
+    font-size: 24px;
+    font-family: monospace;
+}

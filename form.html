@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORM APPLICATION</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container linkcontainer">
+    <h3 class="back"> <a class="back-link" href="./index.html">&#8592; back</a></h3>
+  </div>
+  <header>
+    <div class="container">
+      <h1 class="heading">FORM APLICATION</h1>
+    </div>
+    <nav class="container py-3">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control student-search input" placeholder="Searching...." />
+        <span class="input-group-text">
+          <select class="form-select groups-filter"></select>
+          <select class="form-select adress-filter"></select>
+        </span>
+        <button class="btn btn-outline-success open-modal-btn" type="button" data-bs-toggle="modal"
+          data-bs-target="#studentModal">
+          Add student
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="container">
+        <table class="table table-striped table-hover students-table">
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">FirstName</th>
+              <th scope="col">LastName</th>
+              <th scope="col">Position-level</th>
+              <th scope="col">Is Married</th>
+              <th scope="col">Adress</th>
+              <th scope="col">Salary</th>
+              <th scope="col" class="text-end">Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <!-- Modal -->
+  <div class="modal fade" id="studentModal">
+    <div class="modal-dialog">
+      <form class="row g-3 student-form" novalidate>
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Student data</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="firstName" class="form-label">FirstName</label>
+              <input type="text" class="form-control" id="firstName" required />
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Please fill this field !</div>
+            </div>
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" required />
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Please fill this field !</div>
+            </div>
+            <div class="mb-3">
+              <label for="Position-level" class="form-label">Position-level</label>
+              <select class="form-select groups-select" id="Position-level" required></select>
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Please fill this field !</div>
+            </div>
+            <div class="mb-3">
+              <label for="Adress" class="form-label">Adress</label>
+              <select class="form-select adress-select" id="Adress" required></select>
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Please fill this field !</div>
+            </div>
+            <div class="mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="IsMarried" />
+                <label class="form-check-label" for="IsMarried">
+                  Is Married ?
+                </label>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please fill this field !</div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+            <button type="submit" class="btn btn-primary save-btn">
+              Add student
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/position.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+
+</html>
